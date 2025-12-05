@@ -1,4 +1,4 @@
-from text_indentation import text_indentation
+>>> from text_indentation import text_indentation
 
 >>> text_indentation("Hello. How are you? I am fine: thank you.")
 Hello.
