@@ -15,7 +15,6 @@ Test normal usage
 Test zero size
 --------------
 >>> print_square(0)
-# (prints nothing)
 
 Test exceptions
 ---------------
