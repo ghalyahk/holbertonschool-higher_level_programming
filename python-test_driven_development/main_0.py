@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("Holberton School")
+"""Print Holberton School without extra spaces or lines"""
+
+print("Holberton School", end="")
