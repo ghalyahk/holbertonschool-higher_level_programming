@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """Defines a class Square with size, area, and print method"""
 
+
 class Square:
     """Represents a square"""
 
     def __init__(self, size=0):
         """Initialize a new square with optional size"""
-        self.size = size  # يستخدم setter للتحقق
+        self.size = size
 
     @property
     def size(self):
@@ -29,7 +30,8 @@ class Square:
     def my_print(self):
         """Print the square using # characters"""
         if self.__size == 0:
-            print("")  # سطر فارغ إذا الحجم 0
+            print("")
             return
+
         for _ in range(self.__size):
             print("#" * self.__size)
