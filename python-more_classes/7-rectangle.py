@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class with instance counter and customizable print symbol."""
+"""Defines a Rectangle class with instance counter and
+customizable print symbol.
+"""
 
 
 class Rectangle:
-    """Represents a rectangle."""
+    """Represents a rectangle.
+
+    Supports area, perimeter, string representation, and
+    custom print symbols.
+    """
 
     number_of_instances = 0  # public class attribute
-    print_symbol = "#"       # public class attribute used for string representation
+    print_symbol = "#"       # public class attribute for string representation
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -65,7 +71,9 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         symbol = str(self.print_symbol)
-        lines = [symbol * self.__width for _ in range(self.__height)]
+        lines = []
+        for _ in range(self.__height):
+            lines.append(symbol * self.__width)
         return "\n".join(lines)
 
     def __repr__(self):
