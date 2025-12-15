@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+"""
+Doctest for MyList class
+
+Usage:
+    python3 -m doctest tests/1-my_list.txt -v
+"""
+
+from 1-my_list import MyList
+
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+
+print(my_list)
+# Expected output: [1, 4, 2, 3, 5]
+
+my_list.print_sorted()
+# Expected output: [1, 2, 3, 4, 5]
+
+print(my_list)
+# Expected output: [1, 4, 2, 3, 5]
