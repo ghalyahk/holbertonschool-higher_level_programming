@@ -1,11 +1,11 @@
 """
-Doctest for MyList class
+Doctest for MyList class in 1-my_list.py
 
 Usage:
     python3 -m doctest -v tests/1-my_list.txt
 """
 
->>> from 1-my_list import MyList
+>>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
