@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-This module defines a function `add_attribute` that adds a new attribute to an object
-if the object allows it. Raises TypeError if the attribute cannot be added.
+This module defines a function `add_attribute` that adds a new attribute
+to an object if the object allows it. Raises TypeError if the attribute
+cannot be added.
 """
+
 
 def add_attribute(obj, name, value):
     """
