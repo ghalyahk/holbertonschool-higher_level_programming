@@ -1,0 +1,41 @@
+>>> from text_indentation import text_indentation
+
+>>> text_indentation("Hello. How are you? I am fine: thank you.")
+Hello.
+
+How are you?
+
+I am fine:
+
+thank you.
+
+>>> text_indentation("This is a test: it should work. Do you agree?")
+This is a test:
+
+it should work.
+
+Do you agree?
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("Multiple punctuation!! Really? Yes: indeed.")
+Multiple punctuation!!
+
+Really?
+
+Yes:
+
+indeed.
+
+>>> # Check for spaces at beginning or end
+>>> text_indentation("  Leading and trailing spaces.  Another line?  ")
+Leading and trailing spaces.
+
+Another line?
+
+>>> # Check that TypeError is raised for non-string input
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
