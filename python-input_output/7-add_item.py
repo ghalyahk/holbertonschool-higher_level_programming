@@ -7,10 +7,10 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
-# Load existing list from file if it exists
+# Load existing list from file if possible
 try:
     items = load_from_json_file(filename)
-except FileNotFoundError:
+except (FileNotFoundError, json.decoder.JSONDecodeError):
     items = []
 
 # Add all arguments to the list (excluding script name)
