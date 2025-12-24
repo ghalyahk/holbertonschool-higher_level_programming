@@ -22,6 +22,10 @@ class Student:
         """
         Retrieves a dictionary representation of the Student instance
 
+        If attrs is a list of strings, only attribute names contained
+        in this list will be retrieved. Otherwise, all attributes
+        will be retrieved.
+
         Args:
             attrs (list, optional): list of attribute names to retrieve.
                                     If None, all attributes are retrieved.
@@ -31,5 +35,4 @@ class Student:
         """
         if attrs is None:
             return self.__dict__.copy()
-        else:
-            return {key: value for key, value in self.__dict__.items() if key in attrs}
+        return {key: value for key, value in self.__dict__.items() if key in attrs}
