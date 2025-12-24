@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Function that returns the dictionary description of a class 
+"""Function that returns the dictionary description of a class
 for JSON serialization
 """
 
