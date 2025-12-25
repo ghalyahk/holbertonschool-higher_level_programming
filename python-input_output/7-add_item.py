@@ -1,22 +1,22 @@
 #!/usr/bin/python3
 """
 7-add_item.py
-Adds all arguments to a Python list and saves them to a JSON file.
+Adds all command-line arguments to a Python list and saves them to a JSON file.
 """
 
 import sys
+import json
 from pathlib import Path
 
-# Import helper functions
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 FILENAME = "add_item.json"
 
-# Load existing items if file exists, else start with empty list
-if Path(FILENAME).exists():
+# Try loading existing list, or start with empty list if file doesn't exist or is empty
+try:
     items = load_from_json_file(FILENAME)
-else:
+except (FileNotFoundError, json.JSONDecodeError):
     items = []
 
 # Add command-line arguments to the list
