@@ -29,11 +29,10 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             data = {"name": "John", "age": 30, "city": "New York"}
             self.wfile.write(json.dumps(data).encode("utf-8"))
 
-        # حالة API
+        # حالة API (نص عادي لتوافق الاختبارات)
         elif self.path == "/status":
-            self._set_headers(200, "application/json")
-            status = {"status": "OK"}
-            self.wfile.write(json.dumps(status).encode("utf-8"))
+            self._set_headers(200, "text/plain")
+            self.wfile.write(b"OK")
 
         # مثال endpoint إضافي
         elif self.path == "/info":
