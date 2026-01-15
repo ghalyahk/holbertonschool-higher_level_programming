@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+import marshal
+import types
+
+# تحميل الملف compiled .pyc
+with open("/tmp/hidden_4.pyc", "rb") as f:
+    f.read(16)  # تجاهل الهيدر
+    code = marshal.load(f)
+
+# تحويل الكود إلى كائن قابل للتنفيذ
+module = types.ModuleType("hidden_4")
+exec(code, module.__dict__)
+
+# طباعة أسماء العناصر الموجودة في الوحدة بدون __
+for name in sorted([n for n in dir(module) if not n.startswith("__")]):
+    print(name)
